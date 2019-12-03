@@ -1,0 +1,1 @@
+#lesa inn textaskrár, gera dict
