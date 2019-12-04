@@ -24,7 +24,7 @@ class DestinationIO:
             
             for line in all_lines[1:]:
                 line = line.split(',')
-                dest = Destinations(line[0], line[1]) # 0 = id, 1 = destination
+                dest = Destinations(line[0], line[1], line[2], line[3], line[4], line[5]) # 0 = id, 1 = destination
                 all_dest.append(dest)
 
         return all_dest
