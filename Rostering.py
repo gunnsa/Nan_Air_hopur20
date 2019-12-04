@@ -1,4 +1,5 @@
-
+#from Destinations import Destinations
+from List_destination import DestinationIO
 class Rostering:
 
     HEADER = '#'    # 44
@@ -31,23 +32,36 @@ class Rostering:
     def rostering_command(self):
         while self != 'Q':
             if self == 'V':
+<<<<<<< HEAD
                 Add_new_employee  = 0
+=======
+                Add_new_voyage  = 0
+>>>>>>> 581c82d263ab8f018087b35c3132ee7af60d0bed
 
             elif self == 'A':
                 Add_new_destination = 0
 
-            elif self == 'L':
-                emp_list = List_of_employees.list_employees()
-                List_of_employees.employee_command(emp_list)
+            elif self == 'N':
+                Add_new_aircraft = 0
             
-            elif self == 'V':
-                voyage = 0
+            elif self == 'L':
+                List_voyage = 0
+
+            elif self == 'D':
+                all_destinations = DestinationIO.get_dest_from_file()
+                DestinationIO.display(all_destinations)
+
+            elif self == 'F':
+                List_aircrafts = 0
+
+            elif self == 'C':
+                Change_information = 0
 
             else:
                 print("Invalid command")
                 self = input('Please enter command: ').upper()
 
 if __name__ == "__main__":
-    rostering_command = Rostering.Rostering_office()
-
+    rostering_com = Rostering.Rostering_office()
+    Rostering.rostering_command(rostering_com)
 
