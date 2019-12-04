@@ -44,6 +44,7 @@ class FilterEmployee:
                 self = input('Please enter command: ').upper()
 
 
+
 if __name__ == "__main__":
     all_emp_command = FilterEmployee.specific_condition()
     FilterEmployee.employee_command(all_emp_command)

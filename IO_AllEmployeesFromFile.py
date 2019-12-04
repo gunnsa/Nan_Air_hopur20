@@ -22,7 +22,7 @@ class EmployeeIO:
             
             for line in all_lines[1:]:
                 line = line.split(',')
-                emp = Employee(line[0], line[1], line[2], line[3], line[4], line[5], line[6])
+                emp = Employee(line[0], line[1], line[2], line[3], line[4], line[5], line[6], line[7])
                 all_emps.append(emp)
 
         return all_emps

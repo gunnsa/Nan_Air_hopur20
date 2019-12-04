@@ -1,4 +1,6 @@
 from UI_List_of_employees import List_of_employees
+#from LL_set_Employee import SetEmployee
+from UI_set_new_employee import SetNewEmployee
 
 class CabinOffice:
 
@@ -34,7 +36,8 @@ class CabinOffice:
         while self != 'Q':
 
             if self == 'A':
-                Add_new_employee  = 0
+                set_emp_command = SetNewEmployee.set_new_employee()  
+                SetNewEmployee.set_employee_command(set_emp_command) 
 
             elif self == 'C':
                 Change_employee_information = 0

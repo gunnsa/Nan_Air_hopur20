@@ -40,9 +40,6 @@ class MainMenu:
                 rostering = Rostering.Rostering_office()
                 Rostering.rostering_command(rostering)
 
-            elif self == 'Q':
-                game_on = False
-
             else:
                 print("Invalid command")
                 self = input('Please enter command: ').upper()

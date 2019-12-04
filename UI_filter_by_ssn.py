@@ -26,10 +26,9 @@ class FilterBySSN:
                 '\n\tLicence: {}'
                 '\n\tAddress: {}'
                 '\n\tPhonenumber: {}'
-                .format(employees.ssn, employees.name, employees.role, employees.rank, employees.licens, employees.address, employees.phonenumber))
+                '\n\tEmail address: {}'
+                .format(employees.ssn, employees.name, employees.role, employees.rank, employees.licens, employees.address, employees.phonenumber, employees.email))
                         
-
-
 if __name__ == "__main__":
     emp_ssn = FilterBySSN.specific_ssn()
     FilterBySSN.find_employee(EmployeeIO.get_emp_from_file(), emp_ssn)

@@ -44,9 +44,11 @@ class All_employees:
                 print(EmployeeIO.CHOOSE*EmployeeIO.MAX)
                 command = input('Please enter command: ').upper()
                 print() 
+                self = 'Q'
 
             elif self == 'F':
                 all_emp_command = FilterEmployee.specific_condition()
+                FilterEmployee.employee_command(all_emp_command)
 
             else:
                 print("Invalid command")
