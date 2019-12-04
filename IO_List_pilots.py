@@ -1,37 +1,39 @@
-# Lista alla flugmenn - Notkunartilvik nr 4
-#   Nafn - Starfsheiti (rank)
-#       Captain
-#       Copilot
+#from IO_init_Employee import Employee
+from IO_AllEmployeesFromFile import EmployeeIO
+from LL_List_AllEmployees import AllEmployees
+class AllCabinCrew(EmployeeIO):
+    HEADER = '#'    # 44
+    INFO = '*'      # 44
+    CHOOSE = '_'    # 44
+    COMMENT = ':'   # 2
+    MAX = 44
+    B = 'B - Go back'
+    M = 'M - Main menu'
+    Q = 'Q - Quit'
 
-from Employee import Employee
-
-class EmployeeIO:
-    def get_emp_from_file():
-        path = "Crew.csv"
-        with open(path, "r", encoding="utf-8") as crew_file:
-            all_lines = crew_file.readlines()
-                        
-            all_emps = []
-            for line in all_lines[1:]:
-                line = line.split(',')
-                emp = Employee(line[0], line[1], line[2], line[3], line[4], line[5], line[6])
-                all_emps.append(emp)
-
-        return all_emps
-    
     def get_all_pilots(self):
         
         all_Pilots = {}
         
-        for employee in all_emps:
+        for employee in self:
             if employee.role == 'Pilot':
                 all_Pilots[employee.name] = employee.rank
 
         return all_Pilots
 
+    def display(self):
+        print('{}\n{:^44}\n{}'.format((AllCabinCrew.INFO*AllCabinCrew.MAX), 'List of all Cabin crew', (AllCabinCrew.INFO*AllCabinCrew.MAX)))
 
+        for employees, rank in self.items():
+            print('\t{} - {}'.format(employees.name, employees.rank, end= ''))
+
+        print('\n{:<15}{:^14}{:>15}'.format(AllCabinCrew.Q, AllCabinCrew.M, AllCabinCrew.B))
+        print(AllCabinCrew.CHOOSE*AllCabinCrew.MAX)
+        command = input('Please enter command: ').upper()
+        print() 
+        return command
+
+    
 if __name__ == "__main__":
-    all_emps = EmployeeIO.get_emp_from_file()
-    all_Pilots = EmployeeIO.get_all_pilots(all_emps)
-    for employee, rank in all_Pilots.items():
-        print('\n{} - {}'.format(employee, rank, end= ''))
+    all_Pilots = AllCabinCrew.get_all_pilots(EmployeeIO.get_emp_from_file())
+    command = AllCabinCrew.display(all_Pilots)
