@@ -1,5 +1,5 @@
-from CabinOffice import CabinOffice
-from Rostering import Rostering
+from UI_CabinOffice import CabinOffice
+from UI_Rostering import Rostering
 
 class MainMenu:
 

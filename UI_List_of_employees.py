@@ -1,4 +1,4 @@
-from Employee_information import Employee_information
+from UI_Employee_information import Employee_information
 class List_of_employees:
 
     HEADER = '#'    # 44

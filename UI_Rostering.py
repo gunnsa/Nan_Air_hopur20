@@ -1,5 +1,5 @@
-#from Destinations import Destinations
-from List_destination import DestinationIO
+
+from LL_List_destination import DestinationIO
 class Rostering:
 
     HEADER = '#'    # 44
@@ -33,9 +33,7 @@ class Rostering:
         while self != 'Q':
             if self == 'V':
                 Add_new_employee  = 0
-=======
                 Add_new_voyage  = 0
->>>>>>> 581c82d263ab8f018087b35c3132ee7af60d0bed
 
             elif self == 'A':
                 Add_new_destination = 0

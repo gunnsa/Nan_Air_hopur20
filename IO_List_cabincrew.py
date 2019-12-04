@@ -3,8 +3,10 @@
 #       Flight Service Manager
 #       Flight Attendant
 
-from Employee import Employee
-from ListaAllaStarfsmenn import EmployeeIO
+#from ListaAllaStarfsmenn import EmployeeIO
+
+from AllEmployeesFromFile import EmployeeIO
+
 
 class AllFlightCrew:
         

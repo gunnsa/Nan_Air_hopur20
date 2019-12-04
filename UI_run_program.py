@@ -1,4 +1,4 @@
-from MainMenu import MainMenu
+from UI_MainMenu import MainMenu
 
 # setja def inn í allar -- 
 
