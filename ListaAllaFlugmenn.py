@@ -3,15 +3,7 @@
 #       Captain
 #       Copilot
 
-class Employee:
-    def __init__(self, ssn, name, role, rank, licens, address, phonenumber):
-        self.ssn = ssn
-        self.name = name
-        self.role = role
-        self.rank = rank
-        self.licens = licens
-        self.address = address
-        self.phonenumber = phonenumber
+from Employee import Employee
 
 class EmployeeIO:
     def get_emp_from_file():
