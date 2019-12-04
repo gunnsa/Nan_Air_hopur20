@@ -45,7 +45,7 @@ class EmployeeIO:
     def emp_command(self):
         #while self != 'Q':
         if self == 'Q':
-            break
+            pass
 
             
             

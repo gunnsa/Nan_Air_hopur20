@@ -28,6 +28,25 @@ class Rostering:
         print()
         return command
 
+    def rostering_command(self):
+        while self != 'Q':
+            if self == 'A':
+                Add_new_employee  = 0
+
+            elif self == 'C':
+                Change_employee_information = 0
+
+            elif self == 'L':
+                emp_list = List_of_employees.list_employees()
+                List_of_employees.employee_command(emp_list)
+            
+            elif self == 'V':
+                voyage = 0
+
+            else:
+                print("Invalid command")
+                self = input('Please enter command: ').upper()
+
 if __name__ == "__main__":
     rostering_command = Rostering.Rostering_office()
 
