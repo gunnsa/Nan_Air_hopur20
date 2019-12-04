@@ -1,9 +1,4 @@
-# Lista alla starfsmenn - Notkunartilvik nr 2
-#   Nafn - Starfsheiti (rank)
-#       Captain
-#       Copilot
-#       Flight Service Manager
-#       Flight Attendant
+# VAR FYRRI HLUTI AF ListaAllaStarfsmenn.py !!!!!!
 
 from Employee import Employee
 
@@ -19,7 +14,7 @@ class EmployeeIO:
 
     def get_emp_from_file():
         ''' Returns All employees from file '''
-        
+
         path = "Crew.csv"
         with open(path, "r", encoding="utf-8") as crew_file:
             all_lines = crew_file.readlines()

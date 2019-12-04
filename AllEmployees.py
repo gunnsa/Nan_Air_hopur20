@@ -1,3 +1,5 @@
+# VAR SEINNI HLUTI AF ListaAllaStarfsmenn.py !!!!!!
+
 from AllEmployeesFromFile import EmployeeIO
 
 class AllEmployees:
