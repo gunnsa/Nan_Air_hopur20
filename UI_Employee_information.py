@@ -1,5 +1,6 @@
 from UI_All_employees import All_employees
 from UI_Flight_crew import FlightCrew
+from UI_Cabin_crew import CabinCrew
 
 
 class Employee_information:
@@ -34,7 +35,8 @@ class Employee_information:
 
         while self != 'Q':
             if self == 'C':
-                Cabin_crew = 0
+                flight_crew_command = CabinCrew.flight_crew()  
+                CabinCrew.employee_command(flight_crew_command)
                     
             elif self == 'F':
                 flight_crew_command = FlightCrew.flight_crew()  
