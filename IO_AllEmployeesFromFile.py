@@ -1,6 +1,6 @@
 # VAR FYRRI HLUTI AF ListaAllaStarfsmenn.py !!!!!!
 
-from Employee import Employee
+from IO_init_Employee import Employee
 
 class EmployeeIO:
     HEADER = '#'    # 44

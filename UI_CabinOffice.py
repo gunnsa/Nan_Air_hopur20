@@ -1,4 +1,4 @@
-from List_of_employees import List_of_employees
+from UI_List_of_employees import List_of_employees
 
 class CabinOffice:
 

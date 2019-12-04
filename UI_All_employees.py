@@ -1,6 +1,6 @@
 #from Employee import Employee
 
-from AllEmployeesFromFile import EmployeeIO
+from IO_AllEmployeesFromFile import EmployeeIO
 
 
 class All_employees:

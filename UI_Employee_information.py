@@ -1,5 +1,5 @@
-from All_employees import All_employees
-from Flight_crew import FlightCrew
+from UI_All_employees import All_employees
+from UI_Flight_crew import FlightCrew
 
 
 class Employee_information:
