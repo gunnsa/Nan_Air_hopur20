@@ -1,7 +1,6 @@
-#from IO_init_Employee import Employee
 from IO_AllEmployeesFromFile import EmployeeIO
-from LL_List_AllEmployees import AllEmployees
-class AllCabinCrew(EmployeeIO):
+
+class AllFlightCrew:
     HEADER = '#'    # 44
     INFO = '*'      # 44
     CHOOSE = '_'    # 44
@@ -22,18 +21,18 @@ class AllCabinCrew(EmployeeIO):
         return all_Pilots
 
     def display(self):
-        print('{}\n{:^44}\n{}'.format((AllCabinCrew.INFO*AllCabinCrew.MAX), 'List of all Cabin crew', (AllCabinCrew.INFO*AllCabinCrew.MAX)))
+        print('{}\n{:^44}\n{}'.format((AllFlightCrew.INFO*AllFlightCrew.MAX), 'List of all Flight crew', (AllFlightCrew.INFO*AllFlightCrew.MAX)))
 
         for employees, rank in self.items():
-            print('\t{} - {}'.format(employees.name, employees.rank, end= ''))
+            print('\t{} - {}'.format(employees, rank, end= ''))
 
-        print('\n{:<15}{:^14}{:>15}'.format(AllCabinCrew.Q, AllCabinCrew.M, AllCabinCrew.B))
-        print(AllCabinCrew.CHOOSE*AllCabinCrew.MAX)
+        print('\n{:<15}{:^14}{:>15}'.format(AllFlightCrew.Q, AllFlightCrew.M, AllFlightCrew.B))
+        print(AllFlightCrew.CHOOSE*AllFlightCrew.MAX)
         command = input('Please enter command: ').upper()
         print() 
         return command
 
     
 if __name__ == "__main__":
-    all_Pilots = AllCabinCrew.get_all_pilots(EmployeeIO.get_emp_from_file())
-    command = AllCabinCrew.display(all_Pilots)
+    all_Pilots = AllFlightCrew.get_all_pilots(EmployeeIO.get_emp_from_file())
+    command = AllFlightCrew.display(all_Pilots)
