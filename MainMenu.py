@@ -32,7 +32,8 @@ class MainMenu:
                 CabinOffice.cabin_command(cabin)
 
             elif self == 'R':
-                rostering_command = Rostering.Rostering_office()
+                rostering = Rostering.Rostering_office()
+                Rostering.rostering_command(rostering)
 
             elif self == 'Q':
                 game_on = False
