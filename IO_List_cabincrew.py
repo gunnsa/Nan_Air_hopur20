@@ -1,14 +1,15 @@
-# Lista alla flugthjona - Notkunartilvik nr 6
-#   Nafn - Starfsheiti (rank)
-#       Flight Service Manager
-#       Flight Attendant
-
-#from ListaAllaStarfsmenn import EmployeeIO
-
-from AllEmployeesFromFile import EmployeeIO
+from IO_AllEmployeesFromFile import EmployeeIO
 
 
 class AllFlightCrew:
+    HEADER = '#'    # 44
+    INFO = '*'      # 44
+    CHOOSE = '_'    # 44
+    COMMENT = ':'   # 2
+    MAX = 44
+    B = 'B - Go back'
+    M = 'M - Main menu'
+    Q = 'Q - Quit'
         
         all_cabincrew = {}
         

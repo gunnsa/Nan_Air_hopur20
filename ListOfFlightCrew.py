@@ -2,15 +2,15 @@
 
 
     
-    def get_all_pilots(self):
-        
-        all_Pilots = {}
-        
-        for employee in all_emps:
-            if employee.role == 'Pilot':
-                all_Pilots[employee.name] = employee.rank
+def get_all_pilots(self):
 
-        return all_Pilots
+all_Pilots = {}
+
+for employee in all_emps:
+    if employee.role == 'Pilot':
+        all_Pilots[employee.name] = employee.rank
+
+return all_Pilots
 
 
 if __name__ == "__main__":

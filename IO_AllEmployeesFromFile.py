@@ -13,7 +13,7 @@ class EmployeeIO:
     Q = 'Q - Quit'
 
     def get_emp_from_file():
-        ''' Returns All employees from file '''
+        ''' Returns All Cabin crew from file '''
 
         path = "Crew.csv"
         with open(path, "r", encoding="utf-8") as crew_file:
