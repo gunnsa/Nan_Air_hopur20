@@ -18,6 +18,8 @@ class EmployeeIO:
     Q = 'Q - Quit'
 
     def get_emp_from_file():
+        ''' Returns All employees from file '''
+        
         path = "Crew.csv"
         with open(path, "r", encoding="utf-8") as crew_file:
             all_lines = crew_file.readlines()
@@ -30,26 +32,9 @@ class EmployeeIO:
 
         return all_emps
 
-    def display(self):
-        print('{}\n{:^44}\n{}'.format((EmployeeIO.INFO*EmployeeIO.MAX), 'List of all employees', (EmployeeIO.INFO*EmployeeIO.MAX)))
-
-        for employees in self:
-            print('\t{} - {}'.format(employees.name, employees.rank, end= ''))
-
-        print('\n{:<15}{:^14}{:>15}'.format(EmployeeIO.Q, EmployeeIO.M, EmployeeIO.B))
-        print(EmployeeIO.CHOOSE*EmployeeIO.MAX)
-        command = input('Please enter command: ').upper()
-        print() 
-        return command
-
-    def emp_command(self):
-        #while self != 'Q':
-        if self == 'Q':
-            pass
 
 if __name__ == "__main__":
     all_employees = EmployeeIO.get_emp_from_file()
-    command = EmployeeIO.display(all_employees)
-    EmployeeIO.emp_command(command)
+
     
  

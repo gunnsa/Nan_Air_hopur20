@@ -30,11 +30,11 @@ class Rostering:
 
     def rostering_command(self):
         while self != 'Q':
-            if self == 'A':
+            if self == 'V':
                 Add_new_employee  = 0
 
-            elif self == 'C':
-                Change_employee_information = 0
+            elif self == 'A':
+                Add_new_destination = 0
 
             elif self == 'L':
                 emp_list = List_of_employees.list_employees()

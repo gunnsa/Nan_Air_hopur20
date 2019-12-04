@@ -11,6 +11,9 @@ class List_of_employees:
     Q = 'Q - Quit'
 
     def list_employees():
+        ''' Prints List of employees options
+            Returns input command '''
+
         print('{}\n{:^44}\n{}'.format((List_of_employees.HEADER*List_of_employees.MAX), 'List of employees', (List_of_employees.HEADER*List_of_employees.MAX)))
         
         print('\n\tI - Employee information', 
@@ -23,6 +26,8 @@ class List_of_employees:
         return command
 
     def employee_command(self):
+        ''' Says where to go according to input command '''
+
         while self != 'Q':
             if self == 'I':
                 emp_info_command = Employee_information.employee_info()   

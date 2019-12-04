@@ -1,4 +1,6 @@
-from All_emloyees import All_emloyees
+from All_employees import All_employees
+from Flight_crew import FlightCrew
+
 
 class Employee_information:
 
@@ -12,6 +14,9 @@ class Employee_information:
     Q = 'Q - Quit'
 
     def employee_info():
+        ''' Prints Employee information options
+            Returns input command '''
+
         print('{}\n{:^44}\n{}'.format((Employee_information.HEADER*Employee_information.MAX), 'Employee information', (Employee_information.HEADER*Employee_information.MAX)))
         
         print('\n\tC - Cabin crew',
@@ -25,17 +30,20 @@ class Employee_information:
         return command
 
     def info_command(self):
+        ''' Says where to go according to input command '''
+
         while self != 'Q':
             if self == 'C':
                 Cabin_crew = 0
                     
             elif self == 'F':
-                Flight_crew = 0
+                flight_crew_command = FlightCrew.flight_crew()  
+                FlightCrew.employee_command(flight_crew_command) 
                     
 
             elif self == 'A':
-                all_emp_command = All_emloyees.all_emp()  
-                All_emloyees.employee_command(all_emp_command)
+                all_emp_command = All_employees.all_emp()  
+                All_employees.employee_command(all_emp_command)
 
             else:
                 print("Invalid command")

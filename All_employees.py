@@ -1,9 +1,9 @@
 #from Employee import Employee
 
-from ListaAllaStarfsmenn import EmployeeIO
+from AllEmployeesFromFile import EmployeeIO
 
 
-class All_emloyees:
+class All_employees:
     HEADER = '#'    # 44
     INFO = '*'      # 44
     CHOOSE = '_'    # 44
@@ -14,19 +14,24 @@ class All_emloyees:
     Q = 'Q - Quit'
 
     def all_emp():
-        print('{}\n{:^44}\n{}'.format((All_emloyees.HEADER*All_emloyees.MAX), 'All employees', (All_emloyees.HEADER*All_emloyees.MAX)))
+        ''' Prints All employees options
+            Returns input command '''
+    
+        print('{}\n{:^44}\n{}'.format((All_employees.HEADER*All_employees.MAX), 'All employees', (All_employees.HEADER*All_employees.MAX)))
         
         print('\n\tP - Print list of all employees', 
         '\n\tF - Find by specific condition\n')
 
-        print('\n{:<15}{:^14}{:>15}'.format(All_emloyees.Q, All_emloyees.M, All_emloyees.B))
-        print(All_emloyees.CHOOSE*All_emloyees.MAX)
+        print('\n{:<15}{:^14}{:>15}'.format(All_employees.Q, All_employees.M, All_employees.B))
+        print(All_employees.CHOOSE*All_employees.MAX)
         command = input('Please enter command: ').upper()
         print()
         return command
 
 
     def employee_command(self):
+        ''' Says where to go according to input command '''
+
         while self != 'Q':
             if self == 'P':
                 all_employees = EmployeeIO.get_emp_from_file()
@@ -49,5 +54,5 @@ class All_emloyees:
 
 
 if __name__ == "__main__":
-    all_emp_command = All_emloyees.all_emp()  
-    All_emloyees.employee_command(all_emp_command) 
+    all_emp_command = All_employees.all_emp()  
+    All_employees.employee_command(all_emp_command) 

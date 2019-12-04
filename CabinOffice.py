@@ -12,6 +12,8 @@ class CabinOffice:
     Q = 'Q - Quit'
 
     def Cabin_office():
+        ''' Prints Cabin Office options
+            Returns input command '''
         
         print('{}\n{:^44}\n{}'.format((CabinOffice.HEADER*CabinOffice.MAX), 'Cabin Office', (CabinOffice.HEADER*CabinOffice.MAX)))
 
@@ -27,7 +29,10 @@ class CabinOffice:
         return command
 
     def cabin_command(self):
+        ''' Says where to go according to input command '''
+
         while self != 'Q':
+
             if self == 'A':
                 Add_new_employee  = 0
 

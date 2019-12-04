@@ -15,6 +15,9 @@ class MainMenu:
     Q = 'Q - Quit'
 
     def Menu():
+        ''' Prints Welcome and Main Menu options
+            Returns input command '''
+
         print('\n{:^44}\n'.format(MainMenu.WELCOME))
         print('{}\n{:^44}\n{}'.format((MainMenu.HEADER*MainMenu.MAX), MainMenu.MAINMENU, (MainMenu.HEADER*MainMenu.MAX)))
 
@@ -26,6 +29,8 @@ class MainMenu:
         return command
 
     def menu_command(self):
+        ''' Says where to go according to input command '''
+        
         while self != 'Q':
             if self == 'C':
                 cabin = CabinOffice.Cabin_office()

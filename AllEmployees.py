@@ -1,13 +1,6 @@
-# Lista alla starfsmenn - Notkunartilvik nr 2
-#   Nafn - Starfsheiti (rank)
-#       Captain
-#       Copilot
-#       Flight Service Manager
-#       Flight Attendant
+from AllEmployeesFromFile import EmployeeIO
 
-from Employee import Employee
-
-class EmployeeIO:
+class AllEmployees:
     HEADER = '#'    # 44
     INFO = '*'      # 44
     CHOOSE = '_'    # 44
@@ -16,20 +9,7 @@ class EmployeeIO:
     B = 'B - Go back'
     M = 'M - Main menu'
     Q = 'Q - Quit'
-
-    def get_emp_from_file():
-        path = "Crew.csv"
-        with open(path, "r", encoding="utf-8") as crew_file:
-            all_lines = crew_file.readlines()
-            all_emps = []
-            
-            for line in all_lines[1:]:
-                line = line.split(',')
-                emp = Employee(line[0], line[1], line[2], line[3], line[4], line[5], line[6])
-                all_emps.append(emp)
-
-        return all_emps
-
+    
     def display(self):
         print('{}\n{:^44}\n{}'.format((EmployeeIO.INFO*EmployeeIO.MAX), 'List of all employees', (EmployeeIO.INFO*EmployeeIO.MAX)))
 
@@ -48,8 +28,6 @@ class EmployeeIO:
             pass
 
 if __name__ == "__main__":
-    all_employees = EmployeeIO.get_emp_from_file()
-    command = EmployeeIO.display(all_employees)
-    EmployeeIO.emp_command(command)
-    
- 
+    command = AllEmployees.display(EmployeeIO.get_emp_from_file())
+    AllEmployees.emp_command(command)
+
