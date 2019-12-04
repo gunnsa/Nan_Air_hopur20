@@ -32,11 +32,8 @@ class Rostering:
     def rostering_command(self):
         while self != 'Q':
             if self == 'V':
-<<<<<<< HEAD
                 Add_new_employee  = 0
-=======
                 Add_new_voyage  = 0
->>>>>>> 581c82d263ab8f018087b35c3132ee7af60d0bed
 
             elif self == 'A':
                 Add_new_destination = 0
