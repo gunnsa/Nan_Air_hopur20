@@ -23,11 +23,17 @@ class List_of_employees:
         return command
 
     def employee_command(self):
-        if emp_list == 'I':
-            emp_info_command = Employee_information.employee_info() 
+        while self != 'Q':
+            if self == 'I':
+                emp_info_command = Employee_information.employee_info()   
+                Employee_information.info_command(emp_info_command)
 
-        elif emp_list == 'D':
-            Destinations = 0
+            elif self == 'D':
+                Destinations = 0
+
+            else:
+                print("Invalid command")
+                self = input('Please enter command: ').upper()
 
 
 if __name__ == "__main__":

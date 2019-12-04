@@ -1,3 +1,4 @@
+from All_emloyees import All_emloyees
 
 class Employee_information:
 
@@ -23,6 +24,24 @@ class Employee_information:
         print()
         return command
 
+    def info_command(self):
+        while self != 'Q':
+            if self == 'C':
+                Cabin_crew = 0
+                    
+            elif self == 'F':
+                Flight_crew = 0
+                    
+
+            elif self == 'A':
+                all_emp_command = All_emloyees.all_emp()  
+                All_emloyees.employee_command(all_emp_command)
+
+            else:
+                print("Invalid command")
+                self = input('Please enter command: ').upper()
+
 
 if __name__ == "__main__":
     emp_info_command = Employee_information.employee_info()   
+    Employee_information.info_command(emp_info_command)

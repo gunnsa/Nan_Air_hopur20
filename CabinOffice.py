@@ -27,17 +27,23 @@ class CabinOffice:
         return command
 
     def cabin_command(self):
-        if cabin == 'A':
-            Add_new_employee  = 0
+        while self != 'Q':
+            if self == 'A':
+                Add_new_employee  = 0
 
-        elif cabin == 'C':
-            Change_employee_information = 0
+            elif self == 'C':
+                Change_employee_information = 0
 
-        elif cabin == 'L':
-            emp_list = List_of_employees.list_employees()
-        
-        elif cabin == 'V':
-            voyage = 0
+            elif self == 'L':
+                emp_list = List_of_employees.list_employees()
+                List_of_employees.employee_command(emp_list)
+            
+            elif self == 'V':
+                voyage = 0
+
+            else:
+                print("Invalid command")
+                self = input('Please enter command: ').upper()
 
 if __name__ == "__main__":
     cabin = CabinOffice.Cabin_office()

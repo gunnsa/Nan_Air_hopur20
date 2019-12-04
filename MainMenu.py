@@ -1,6 +1,5 @@
 from CabinOffice import CabinOffice
 from Rostering import Rostering
-from List_of_employees import List_of_employees
 
 class MainMenu:
 
@@ -19,25 +18,28 @@ class MainMenu:
         print('\n{:^44}\n'.format(MainMenu.WELCOME))
         print('{}\n{:^44}\n{}'.format((MainMenu.HEADER*MainMenu.MAX), MainMenu.MAINMENU, (MainMenu.HEADER*MainMenu.MAX)))
 
-
         print('\n\tQ - Quit', '\n\tC - Cabin office', '\n\tR - Rostering', '\n\tH - Help\n')
 
         print(MainMenu.CHOOSE*MainMenu.MAX)
         command = input('Please enter command: ').upper()
         print()
         return command
-        #print('\n{:<15}{:^14}{:>15}'.format(MainMenu.Q, MainMenu.M, MainMenu.B))
 
     def menu_command(self):
-        if menu_command == 'C':
-            cabin = CabinOffice.Cabin_office()
-            CabinOffice.cabin_command(cabin)
+        while self != 'Q':
+            if self == 'C':
+                cabin = CabinOffice.Cabin_office()
+                CabinOffice.cabin_command(cabin)
 
-        elif menu_command == 'R':
-            rostering_command = Rostering.Rostering_office()
+            elif self == 'R':
+                rostering_command = Rostering.Rostering_office()
 
-        elif menu_command == 'Q':
-            game_on = False
+            elif self == 'Q':
+                game_on = False
+
+            else:
+                print("Invalid command")
+                self = input('Please enter command: ').upper()
 
 if __name__ == "__main__":
     menu_command = MainMenu.Menu()

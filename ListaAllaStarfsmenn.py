@@ -28,19 +28,32 @@ class EmployeeIO:
                 emp = Employee(line[0], line[1], line[2], line[3], line[4], line[5], line[6])
                 all_emps.append(emp)
 
-         
         return all_emps
+
+    def display():
+        print('{}\n{:^44}\n{}'.format((EmployeeIO.INFO*EmployeeIO.MAX), 'List of all employees', (EmployeeIO.INFO*EmployeeIO.MAX)))
+
+        for employees in all_employees:
+            print('\t{} - {}'.format(employees.name, employees.rank, end= ''))
+
+        print('\n{:<15}{:^14}{:>15}'.format(EmployeeIO.Q, EmployeeIO.M, EmployeeIO.B))
+        print(EmployeeIO.CHOOSE*EmployeeIO.MAX)
+        command = input('Please enter command: ').upper()
+        print() 
+        return command
+
+    def emp_command(self):
+        #while self != 'Q':
+        if self == 'Q':
+            break
+
+            
+            
 
 
 if __name__ == "__main__":
     all_employees = EmployeeIO.get_emp_from_file()
-    print('{}\n{:^44}\n{}'.format((EmployeeIO.INFO*EmployeeIO.MAX), 'List of all employees', (EmployeeIO.INFO*EmployeeIO.MAX)))
-
-    for employees in all_employees:
-        print('\t{} - {}'.format(employees.name, employees.rank, end= ''))
-
-    print('\n{:<15}{:^14}{:>15}'.format(EmployeeIO.Q, EmployeeIO.M, EmployeeIO.B))
-    print(EmployeeIO.CHOOSE*EmployeeIO.MAX)
-    command = input('Please enter command: ').upper()
-    print() 
+    command = EmployeeIO.display()
+    EmployeeIO.emp_command(command)
+    
  
