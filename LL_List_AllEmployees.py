@@ -1,6 +1,6 @@
 # VAR SEINNI HLUTI AF ListaAllaStarfsmenn.py !!!!!!
 
-from AllEmployeesFromFile import EmployeeIO
+from IO_AllEmployeesFromFile import EmployeeIO
 
 class AllEmployees:
     HEADER = '#'    # 44
@@ -13,19 +13,18 @@ class AllEmployees:
     Q = 'Q - Quit'
     
     def display(self):
-        print('{}\n{:^44}\n{}'.format((EmployeeIO.INFO*EmployeeIO.MAX), 'List of all employees', (EmployeeIO.INFO*EmployeeIO.MAX)))
+        print('{}\n{:^44}\n{}'.format((AllEmployees.INFO*AllEmployees.MAX), 'List of all employees', (AllEmployees.INFO*AllEmployees.MAX)))
 
         for employees in self:
             print('\t{} - {}'.format(employees.name, employees.rank, end= ''))
 
-        print('\n{:<15}{:^14}{:>15}'.format(EmployeeIO.Q, EmployeeIO.M, EmployeeIO.B))
-        print(EmployeeIO.CHOOSE*EmployeeIO.MAX)
+        print('\n{:<15}{:^14}{:>15}'.format(AllEmployees.Q, AllEmployees.M, AllEmployees.B))
+        print(AllEmployees.CHOOSE*AllEmployees.MAX)
         command = input('Please enter command: ').upper()
         print() 
         return command
 
     def emp_command(self):
-        #while self != 'Q':
         if self == 'Q':
             pass
 
