@@ -1,9 +1,8 @@
-id,destination
-LYR,Longyearbyean
-GOH,Nuuk
-KUS,Kulusuk
-FAE,Thorshavn
-LWK,Tingwall
-KEF,Keflavik
+id,destination,flighttime,distance,name_emergencycontact,number_emergencycontact
+LYR,Longyearbyean,5:45,2020,Laura_henriksen,43343454
+GOH,Nuuk,3:20,1398,Alari_Aama,3435545
+KUS,Kulusuk,1:05 ,707,Laartu_Apili,6556545
+FAE,Thorshavn,1:30,801,Absalon_Mórus,65765456
+LWK,Tingwall,1:20,735,John_Petersen, 56476654
+KEF,Keflavik,0,0,Gudrun_Svavarsdóttir, 8995643
 
-monika
