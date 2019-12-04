@@ -1,4 +1,4 @@
-
+from Employee_information import Employee_information
 class List_of_employees:
 
     HEADER = '#'    # 44
@@ -22,6 +22,14 @@ class List_of_employees:
         print()
         return command
 
+    def employee_command(self):
+        if emp_list == 'I':
+            emp_info_command = Employee_information.employee_info() 
+
+        elif emp_list == 'D':
+            Destinations = 0
+
 
 if __name__ == "__main__":
-    emp_list = List_of_employees.list_employees()   
+    emp_list = List_of_employees.list_employees()
+    List_of_employees.employee_command(emp_list)  

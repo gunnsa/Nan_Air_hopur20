@@ -1,3 +1,4 @@
+from List_of_employees import List_of_employees
 
 class CabinOffice:
 
@@ -25,7 +26,21 @@ class CabinOffice:
         print()
         return command
 
+    def cabin_command(self):
+        if cabin == 'A':
+            Add_new_employee  = 0
+
+        elif cabin == 'C':
+            Change_employee_information = 0
+
+        elif cabin == 'L':
+            emp_list = List_of_employees.list_employees()
+        
+        elif cabin == 'V':
+            voyage = 0
+
 if __name__ == "__main__":
-    cabin_command = CabinOffice.Cabin_office()
+    cabin = CabinOffice.Cabin_office()
+    CabinOffice.cabin_command(cabin)
 
 
