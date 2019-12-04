@@ -5,7 +5,7 @@
 #        self.id = id
 #        self.destination = destination
 
-from Destinations import Destinations
+from IO_init_Destinations import Destinations
 
 class DestinationIO:
     HEADER = '#'    # 44
@@ -18,7 +18,7 @@ class DestinationIO:
     Q = 'Q - Quit'
 
     def get_dest_from_file():
-        with open('Destinations.csv', 'r', encoding= 'utf-8') as file_object:
+        with open('csv_Destinations.csv', 'r', encoding= 'utf-8') as file_object:
             all_lines = file_object.readlines()
             all_dest = []
             
