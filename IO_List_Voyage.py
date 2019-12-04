@@ -9,7 +9,7 @@ class VoyageIO:
         
             for line in all_lines[2:]:
                 line = line.split(',')
-                voyages = Voyage(line[0], line[1], line[2], line[3], line[4], line[5], line[6], line[7], line[8])
+                voyages = Voyage(line[0], line[1], line[2], line[3], line[4], line[5])
                 all_voyages.append(voyages)
         return all_voyages
 
@@ -24,3 +24,4 @@ Time of departure to KEF: {}\n Distance: {}\n Emergency contact: {}\n \
 Emergency phone: {}\n\
 '.format(voyage.destination, voyage.airplane, voyage.date_out, voyage.flight_time_from_KEF, voyage.date_home, voyage.flight_time_to_KEF, voyage.distance, voyage.emergency_contact, voyage.emergency_phone))
         counter += 1
+
