@@ -1,6 +1,9 @@
 from LL_List_destination import DestinationIO
 from LL_set_destination import SetDestination
 from IO_List_Voyage import VoyageIO
+from LL_set_Voyage import SetVoyage
+from LL_set_aircraft import SetAircraft
+
 class Rostering:
 
     HEADER = '#'    # 44
@@ -33,14 +36,19 @@ class Rostering:
     def rostering_command(self):
         while self != 'Q':
             if self == 'V':
-                Add_new_voyage  = 0
+                new_voyage = SetVoyage.display_main_menu()
+                SetVoyage.set_voyage(new_voyage)
+                SetVoyage.display_command()
 
             elif self == 'A':
                 new_destination = SetDestination.display_main_menu()
                 SetDestination.set_destination(new_destination)
+                SetDestination.display_command()
 
             elif self == 'N':
-                Add_new_aircraft = 0
+                new_aircraft = SetAircraft.display_main_menu()
+                SetAircraft.set_voyage(new_aircraft)
+                SetAircraft.display_command()
             
             elif self == 'L':
                 all_voyages = VoyageIO.get_voyage()
