@@ -37,8 +37,8 @@ class MainMenu:
                 CabinOffice.cabin_command(cabin)
 
             elif self == 'R':
-                rostering = Rostering.Rostering_office()
-                Rostering.rostering_command(rostering)
+                rostering_com = Rostering.Rostering_office()
+                Rostering.rostering_command(rostering_com)
 
             else:
                 print("Invalid command")
