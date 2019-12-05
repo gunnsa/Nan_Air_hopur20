@@ -1,20 +1,20 @@
-
-WELCOME = "WELCOME TO NaN AIR"
-MAINMENU = 'MAIN MENU'
-ENTER_INFO = 'Please enter information below'
-HEADER = '#'    # 44
-INFO = '*'      # 44
-CHOOSE = '_'    # 44
-COMMENT = ':'   # 2
-MAX = 44
-B = 'B - Go back'
-M = 'M - Main menu'
-Q = 'Q - Quit'
-
+#from UI_Rostering import Rostering
+from IO_init_Destinations import Destinations
 class SetDestination:
+    WELCOME = "WELCOME TO NaN AIR"
+    MAINMENU = 'MAIN MENU'
+    HEADER = '#'    # 44
+    INFO = '*'      # 44
+    CHOOSE = '_'    # 44
+    COMMENT = ':'   # 2
+    MAX = 44
+    B = 'B - Go back'
+    M = 'M - Main menu'
+    Q = 'Q - Quit'
+
     def display_main_menu():
         destination_list = []
-        print('\n{}\n{:^44}\n{}\n'.format((INFO*MAX), ENTER_INFO, (INFO*MAX)))
+        print('\n{}\n{:^44}\n{}\n'.format((SetDestination.INFO*SetDestination.MAX), 'Please enter information below', (SetDestination.INFO*SetDestination.MAX)))
         id_dest = input('ID: ')
         destination_list.append(id_dest)
         dest = input('Destination: ')
@@ -28,8 +28,15 @@ class SetDestination:
         em_phone = input('Emergency phone: ')
         destination_list.append(em_phone)
 
-        print('\n:: {} has been added to destinations ::'.format(dest))
+        print('\n:: {} has been added as a destination ::'.format(dest))
         return destination_list
+
+    def display_command():
+        print('\n{:<15}{:^14}{:>15}'.format(SetDestination.Q, SetDestination.M, SetDestination.B))
+        print(SetDestination.CHOOSE*SetDestination.MAX)
+        command = input('Please enter command: ').upper()
+        print() 
+        return command
 
     def set_destination(self):
         import csv
@@ -40,6 +47,7 @@ class SetDestination:
 if __name__ == "__main__":
     new_destination = SetDestination.display_main_menu()
     SetDestination.set_destination(new_destination)
+    SetDestination.display_command()
 
 
 

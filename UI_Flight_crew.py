@@ -1,5 +1,5 @@
 from IO_AllEmployeesFromFile import EmployeeIO
-from IO_List_cabincrew import AllCabinCrew
+from IO_List_FlightCrew import AllFlightCrew
 class FlightCrew:
     HEADER = '#'    # 44
     INFO = '*'      # 44
@@ -30,8 +30,8 @@ class FlightCrew:
 
         while self != 'Q':
             if self == 'P':
-                all_Pilots = AllCabinCrew.get_all_cabin_crew(EmployeeIO.get_emp_from_file())
-                command = AllCabinCrew.display(all_Pilots)
+                all_Pilots = AllFlightCrew.get_all_pilots(EmployeeIO.get_emp_from_file())
+                command = AllFlightCrew.display(all_Pilots)
 
 
             elif self == 'F':

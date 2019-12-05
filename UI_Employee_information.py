@@ -42,7 +42,6 @@ class Employee_information:
                 flight_crew_command = FlightCrew.flight_crew()  
                 FlightCrew.employee_command(flight_crew_command) 
                     
-
             elif self == 'A':
                 all_emp_command = All_employees.all_emp()  
                 All_employees.employee_command(all_emp_command)

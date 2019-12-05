@@ -1,7 +1,7 @@
 #from Employee import Employee
 
 from IO_AllEmployeesFromFile import EmployeeIO
-
+from UI_Filter_employee import FilterEmployee
 
 class All_employees:
     HEADER = '#'    # 44
@@ -46,7 +46,8 @@ class All_employees:
                 print() 
 
             elif self == 'F':
-                Find_by_specific_condition = 0
+                all_emp_command = FilterEmployee.specific_condition()
+                FilterEmployee.employee_command(all_emp_command)
 
             else:
                 print("Invalid command")

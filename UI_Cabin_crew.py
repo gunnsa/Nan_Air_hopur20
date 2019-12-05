@@ -10,7 +10,7 @@ class CabinCrew:
     M = 'M - Main menu'
     Q = 'Q - Quit'
 
-    def flight_crew():
+    def cabin_crew():
         ''' Prints Flight crew options
             Returns input command '''
 
@@ -43,5 +43,5 @@ class CabinCrew:
 
 
 if __name__ == "__main__":
-    flight_crew_command = CabinCrew.flight_crew()  
-    CabinCrew.employee_command(flight_crew_command) 
+    cabin_crew_command = CabinCrew.cabin_crew()  
+    CabinCrew.employee_command(cabin_crew_command) 
