@@ -17,7 +17,7 @@ class UIMain:
             print("\t2: Voyage")
             print("\t3: Aircrafts")
             print("\t4: Destinations")
-            print("\tq: Quit")
+            print("\tQ: Quit")
             print()
 
             print("_"*44)
@@ -35,7 +35,7 @@ class UIMain:
             elif command == "4":
                 UISubDestinationMenu()
 
-            elif command == "q":
+            elif command == "q" or command == 'Q':
                 break
 
             else:

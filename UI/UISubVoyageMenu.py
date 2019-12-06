@@ -14,7 +14,7 @@ class UISubVoyageMenu:
         print("\t3: Get all Voyages on specific week")
         print("\t4: Update Voyage information")
         print("\t5: Add new Voyage")
-        print("\tq: Quit")
+        print("\tQ: Quit")
         print()
 
         print("_"*44)

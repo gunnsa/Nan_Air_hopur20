@@ -17,7 +17,7 @@ class UISubEmployeeMenu:
         print("\t5: Create Cabin Crew")
         print("\t6: Create Pilot")
         print("\t7: Update employee")
-        print("\tq: Quit")
+        print("\tQ: Quit")
         print()
 
         print("_"*44)

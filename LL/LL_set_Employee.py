@@ -7,4 +7,4 @@ class LL_Set_Employee:
         pass
 
     def createEmployee(self, employeeToCreate):
-        IO_EmployeesFromFile().createEmployee(employeeToCreate)
+        IO_EmployeesFromFile().addEmployeeToFile(employeeToCreate)

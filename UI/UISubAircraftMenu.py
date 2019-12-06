@@ -12,7 +12,7 @@ class UISubAircraftsMenu:
         print("\t1: Get all Aircrafts") #
         print("\t2: Update Aircraft information")
         print("\t3: Add new Aircraft")
-        print("\tq: Quit")
+        print("\tQ: Quit")
         print()
 
         print("_"*44)
