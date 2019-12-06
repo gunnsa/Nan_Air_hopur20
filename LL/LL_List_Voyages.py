@@ -1,5 +1,6 @@
 from IO.IO_VoyagesFromFile import IO_VoyagesFromFile
-#import datetime
+
+from datetime import datetime, date, time
 #import dateutil.parser
 
 class LL_List_Voyages:
@@ -17,5 +18,7 @@ class LL_List_Voyages:
         for line in pastFlight_list:
             date = dateutil.parser.parse(line.departure)          
         return date
+
+
 
 

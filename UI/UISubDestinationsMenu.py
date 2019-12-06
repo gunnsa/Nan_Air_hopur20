@@ -12,7 +12,7 @@ class UISubDestinationMenu:
         print("\t1: Get all Destinations") #
         print("\t2: Update Destination information")
         print("\t3: Add new Destination")
-        print("\tq: Quit")
+        print("\tQ: Quit")
         print()
         
         print("_"*44)

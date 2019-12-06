@@ -19,6 +19,6 @@ class IO_EmployeesFromFile:
 
     def addEmployeeToFile(self, employee):
         with open("Crew.csv", "a", encoding="utf-8") as crew_file:
-            fieldnames = ["ssn","name","role","rank","licence","address","phonenumber","email"]
+            fieldnames = ["ssn","name","role","rank","license","address","phonenumber","email"]
             writer = csv.DictWriter(crew_file, fieldnames = fieldnames)
-            writer.writerow({"ssn": employee.ssn, "name": employee.name, "ssn": employee.ssn})#klára a filla út
+            writer.writerow({"ssn": employee.ssn, "name": employee.name, "role": employee.role, "rank": employee.rank, "license": employee.license, "address": employee.address, "phonenumber": employee.phonenumber, "email": employee.email} )
