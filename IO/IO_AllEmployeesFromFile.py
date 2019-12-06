@@ -1,35 +1,24 @@
-# VAR FYRRI HLUTI AF ListaAllaStarfsmenn.py !!!!!!
+from MODEL.Model_Employee import Model_Employee
+import csv
 
-from MODEL.Model_Employee import Employee
-
-class EmployeeIO:
-    HEADER = '#'    # 44
-    INFO = '*'      # 44
-    CHOOSE = '_'    # 44
-    COMMENT = ':'   # 2
-    MAX = 44
-    B = 'B - Go back'
-    M = 'M - Main menu'
-    Q = 'Q - Quit'
+class IO_AllEmployeesFromFile:
 
     def get_emp_from_file(self):
-        ''' Returns All Cabin crew from file '''
+        ''' Returns All Employees from file '''
 
-        path = "Crew.csv"
-        with open(path, "r", encoding="utf-8") as crew_file:
+        with open("Crew.csv", "r", encoding="utf-8") as crew_file:
             all_lines = crew_file.readlines()
             all_emps = []
             
             for line in all_lines[1:]:
                 line = line.split(',')
-                emp = Employee(line[0], line[1], line[2], line[3], line[4], line[5], line[6], line[7])
+                emp = Model_Employee(line[0], line[1], line[2], line[3], line[4], line[5], line[6], line[7])
                 all_emps.append(emp)
 
         return all_emps
 
-
-if __name__ == "__main__":
-    all_employees = EmployeeIO().get_emp_from_file()
-
-    
- 
+    def addEmployeeToFile(self, employee):
+        with open("Crew.csv", "a", encoding="utf-8") as crew_file:
+            fieldnames = ["ssn","name","role","rank","licence","address","phonenumber","email"]
+            writer = csv.DictWriter(crew_file, fieldnames = fieldnames)
+            writer.writerow({"ssn": employee.ssn, "name": employee.name, "ssn": employee.ssn})#klára a filla út
