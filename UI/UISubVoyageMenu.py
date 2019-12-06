@@ -22,8 +22,8 @@ class UISubVoyageMenu:
         print()
         if command == "1":
             nextUI = UI_List_Voyages()
-            #nextUI.listAllPastFlights()
-            nextUI.listAllUpcomingFlights()
+            #nextUI.listPastFlights()
+            nextUI.listUpcomingFlights()
 
         elif command == "2":
             nextUI = UI_List_Voyages()

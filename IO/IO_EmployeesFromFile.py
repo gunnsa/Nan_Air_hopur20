@@ -1,7 +1,7 @@
 from MODEL.Model_Employee import Model_Employee
 import csv
 
-class IO_AllEmployeesFromFile:
+class IO_EmployeesFromFile:
 
     def get_emp_from_file(self):
         ''' Returns All Employees from file '''

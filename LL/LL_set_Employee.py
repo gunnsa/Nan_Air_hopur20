@@ -1,4 +1,4 @@
-from IO.IO_AllEmployeesFromFile import IO_AllEmployeesFromFile
+from IO.IO_EmployeesFromFile import IO_EmployeesFromFile
 
 
 class LL_Set_Employee:
@@ -7,4 +7,4 @@ class LL_Set_Employee:
         pass
 
     def createEmployee(self, employeeToCreate):
-        IO_AllEmployeesFromFile().createEmployee(employeeToCreate)
+        IO_EmployeesFromFile().createEmployee(employeeToCreate)

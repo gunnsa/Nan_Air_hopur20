@@ -1,18 +1,18 @@
-from LL.LL_List_AllAircrafts import LL_List_AllAircrafts
+from LL.LL_List_Aircrafts import LL_List_Aircrafts
 
 class UI_List_Aircrafts:
 
     def __init__(self):
         pass
 
-    def listAllAircraftTypes(self):
+    def listAircraftTypes(self):
         ''' PRENTAR ALLA AIRCRAFT TYPES '''
-        result = LL_List_AllAircrafts().get_aircraftType_list()
+        result = LL_List_Aircrafts().get_aircraftType_list()
         for aircraftType in result:
             print(aircraftType)
 
-    def listAllAircrafts(self):
+    def listAircrafts(self):
         ''' PRENTAR ALLA AIRCRAFTS '''
-        result = LL_List_AllAircrafts().get_aircrafts_list()
+        result = LL_List_Aircrafts().get_aircrafts_list()
         for aircrafts in result:
             print(aircrafts)

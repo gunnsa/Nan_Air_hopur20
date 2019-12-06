@@ -19,7 +19,7 @@ class UISubDestinationMenu:
         command = input("Enter a valid command: ")
         if command == "1":
             nextUI = UI_List_Destinations()
-            nextUI.listAllDestinations()
+            nextUI.listDestinations()
 
         elif command == "2":
             print("not implemented")

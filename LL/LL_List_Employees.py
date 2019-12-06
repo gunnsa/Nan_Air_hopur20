@@ -1,9 +1,9 @@
-from IO.IO_AllEmployeesFromFile import IO_AllEmployeesFromFile
+from IO.IO_EmployeesFromFile import IO_EmployeesFromFile
 
-class LL_List_AllEmployees:
+class LL_List_Employees:
 
     def get_crew_list(self):
-        crew_list = IO_AllEmployeesFromFile().get_emp_from_file()
+        crew_list = IO_EmployeesFromFile().get_emp_from_file()
         return crew_list
 
     def getOneEmployee(self, userName):
