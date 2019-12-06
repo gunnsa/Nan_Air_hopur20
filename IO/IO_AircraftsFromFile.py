@@ -2,7 +2,7 @@ from MODEL.Model_AircraftType import Model_AircraftType
 from MODEL.Model_Aircrafts import Model_Aircrafts
 
 
-class IO_AllAircraftsFromFile:
+class IO_AircraftsFromFile:
 
     def get_aircraftType_from_file(self):
         ''' Returns All Aircraft Types from file '''

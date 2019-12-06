@@ -2,7 +2,7 @@ from MODEL.Model_PastFlights import Model_PastFlights
 from MODEL.Model_UpcomingFlights import Model_UpcomingFlights
 import datetime
 
-class IO_AllVoyagesFromFile:
+class IO_VoyagesFromFile:
 
     def get_pastFlights_from_file(self):
         ''' Returns All Past Flights from file '''

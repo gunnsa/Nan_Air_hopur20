@@ -1,6 +1,6 @@
 from MODEL.Model_Destinations import Model_Destinations
 
-class IO_AllDestinationsFromFile:
+class IO_DestinationsFromFile:
 
     def get_dest_from_file(self):
         ''' Returns All Destinations from file '''

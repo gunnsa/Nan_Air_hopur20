@@ -19,8 +19,8 @@ class UISubAircraftsMenu:
         command = input("Enter a valid command: ")
         if command == "1":
             nextUI = UI_List_Aircrafts()
-            nextUI.listAllAircraftTypes()
-            #nextUI.listAllAircrafts()
+            nextUI.listAircraftTypes()
+            #nextUI.listAircrafts()
 
         elif command == "2":
             print("not implemented")

@@ -25,17 +25,17 @@ class UISubEmployeeMenu:
         if command == "1":
             ''' PRENTAR ALLA STARFSMENN '''
             nextUI = UI_List_Employees()
-            nextUI.listAllEmployees()
+            nextUI.listEmployees()
 
         elif command == "2":
             ''' PRENTAR ALLA PILOTS '''
             nextUI = UI_List_Employees()
-            nextUI.listAllPilots()
+            nextUI.listPilots()
 
         elif command == "3":
             ''' PRENTAR ALLA CABIN CREW '''
             nextUI = UI_List_Employees()
-            nextUI.listAllCabinCrew()
+            nextUI.listCabinCrew()
 
         elif command == "4":
             ''' PRENTAR UPPL. UM AKVEDINN STARFSMANN '''
