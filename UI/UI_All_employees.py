@@ -1,7 +1,7 @@
 #from Employee import Employee
 
-from IO_AllEmployeesFromFile import EmployeeIO
-from UI_Filter_employee import FilterEmployee
+from IO.IO_AllEmployeesFromFile import EmployeeIO
+from UI.UI_Filter_employee import FilterEmployee
 
 class All_employees:
     HEADER = '#'    # 44
@@ -13,7 +13,7 @@ class All_employees:
     M = 'M - Main menu'
     Q = 'Q - Quit'
 
-    def all_emp():
+    def all_emp(self):
         ''' Prints All employees options
             Returns input command '''
     
@@ -29,11 +29,11 @@ class All_employees:
         return command
 
 
-    def employee_command(self):
+    def employee_command(self, other):
         ''' Says where to go according to input command '''
 
-        while self != 'Q':
-            if self == 'P':
+        while other != 'Q':
+            if other == 'P':
                 all_employees = EmployeeIO.get_emp_from_file()
                 print('{}\n{:^44}\n{}'.format((EmployeeIO.INFO*EmployeeIO.MAX), 'List of all employees', (EmployeeIO.INFO*EmployeeIO.MAX)))
 
@@ -45,15 +45,15 @@ class All_employees:
                 command = input('Please enter command: ').upper()
                 print() 
 
-            elif self == 'F':
+            elif other == 'F':
                 all_emp_command = FilterEmployee.specific_condition()
                 FilterEmployee.employee_command(all_emp_command)
 
             else:
                 print("Invalid command")
-                self = input('Please enter command: ').upper()
+                other = input('Please enter command: ').upper()
 
 
 if __name__ == "__main__":
-    all_emp_command = All_employees.all_emp()  
-    All_employees.employee_command(all_emp_command) 
+    all_emp_command = All_employees().all_emp()  
+    All_employees().employee_command(all_emp_command) 

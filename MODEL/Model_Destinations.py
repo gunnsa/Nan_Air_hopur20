@@ -1,4 +1,4 @@
-class Destinations:
+class Destination:
     def __init__(self, id, destination, flighttime, distance, name_emergencycontact, number_emergencycontact):
         self.id = id
         self.destination = destination

@@ -2,6 +2,8 @@
 
 from IO_AllEmployeesFromFile import EmployeeIO
 
+from 
+
 class AllEmployees:
     HEADER = '#'    # 44
     INFO = '*'      # 44
@@ -11,8 +13,15 @@ class AllEmployees:
     B = 'B - Go back'
     M = 'M - Main menu'
     Q = 'Q - Quit'
-    
-    def display(self):
+
+    def get_crew_list(self):
+        crew_list = EmployeeIO().get_emp_from_file()
+        return crew_list
+
+
+
+    # færa í UI list of employees
+    '''def display(self):
         print('{}\n{:^44}\n{}'.format((AllEmployees.INFO*AllEmployees.MAX), 'List of all employees', (AllEmployees.INFO*AllEmployees.MAX)))
 
         for employees in self:
@@ -26,9 +35,13 @@ class AllEmployees:
 
     def emp_command(self):
         if self == 'Q':
-            pass
+            pass '''
+
+
 
 if __name__ == "__main__":
-    command = AllEmployees.display(EmployeeIO.get_emp_from_file())
-    AllEmployees.emp_command(command)
+    get_crew_list()
+
+    '''command = AllEmployees.display(EmployeeIO.get_emp_from_file())
+    AllEmployees.emp_command(command)'''
 

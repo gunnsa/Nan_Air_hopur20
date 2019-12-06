@@ -1,6 +1,6 @@
 # VAR FYRRI HLUTI AF ListaAllaStarfsmenn.py !!!!!!
 
-from IO_init_Employee import Employee
+from MODEL.Model_Employee import Employee
 
 class EmployeeIO:
     HEADER = '#'    # 44
@@ -12,7 +12,7 @@ class EmployeeIO:
     M = 'M - Main menu'
     Q = 'Q - Quit'
 
-    def get_emp_from_file():
+    def get_emp_from_file(self):
         ''' Returns All Cabin crew from file '''
 
         path = "Crew.csv"
@@ -29,7 +29,7 @@ class EmployeeIO:
 
 
 if __name__ == "__main__":
-    all_employees = EmployeeIO.get_emp_from_file()
+    all_employees = EmployeeIO().get_emp_from_file()
 
     
  
