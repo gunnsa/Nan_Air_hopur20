@@ -13,17 +13,19 @@ class UI_List_Employees:
 
     def listPilots(self):
         ''' PRENTAR ALLA PILOTS '''
-        result = LL_List_Employees().get_crew_list()
-        for PilotMember in result:
-            if PilotMember.role == 'Pilot':
-                print(PilotMember.name, PilotMember.rank)
+        pilot_str = 'Pilot'
+        pilot_list = LL_List_Employees().get_Pilots(pilot_str)
+        for pilot in pilot_list:
+            print(pilot)
+
 
     def listCabinCrew(self):
         ''' PRENTAR ALLA CABIN CREW '''
-        result = LL_List_Employees().get_crew_list()
-        for CabinMember in result:
-            if CabinMember.role == 'Cabincrew':
-                print(CabinMember.name, CabinMember.rank)
+        cabin_str = 'Cabincrew'
+        cabin_list = LL_List_Employees().get_Cabin(cabin_str)
+        for cabin in cabin_list:
+            print(cabin)
+
 
     def listByFilter(self):
         ''' PRENTAR ALLA STARFSMENN EFTIR AKVEDNU NAFNI '''

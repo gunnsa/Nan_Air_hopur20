@@ -20,7 +20,13 @@ class UI_List_Voyages:
             print(upcomingFlights)
 
     def listByDateFilter(self):
-        date_input = input("Date: ")
+        year = input("Year: ")
+        month = input("Month: ")
+        day = input("Day: ")
+        hour = input("Hour: ")
+        minute = input("Minute: ")
+
+
         print()
         result = LL_List_Voyages().get_upcomingFlights_list()
         for date in result:

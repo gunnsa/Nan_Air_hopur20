@@ -1,10 +1,10 @@
 class Model_Employee:
-    def __init__(self, ssn, name, role, rank, licens, address, phonenumber, email):
+    def __init__(self, ssn, name, role, rank, license, address, phonenumber, email):
         self.ssn = ssn
         self.name = name
         self.role = role
         self.rank = rank
-        self.licens = licens
+        self.license = license
         self.address = address
         self.phonenumber = phonenumber
         self.email = email
@@ -15,7 +15,7 @@ class Model_Employee:
         retString += self.name + " "
         retString += self.role + " "
         retString += self.rank + " "
-        retString += self.licens + " "
+        retString += self.license + " "
         retString += self.address + " "
         retString += self.phonenumber + " "
         retString += self.email + " "
